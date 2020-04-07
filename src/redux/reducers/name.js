@@ -6,9 +6,7 @@ const nameReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_NAME: {
       const { name } = action.payload;
-      return {
-        name,
-      };
+      return name;
     }
     default:
       return state;
