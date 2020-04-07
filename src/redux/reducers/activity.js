@@ -1,28 +1,25 @@
 //import action types
-import { ACTION_NAP, ACTION_EAT, ACTION_PLAY } from "../actionTypes";
+import { ACTION_SET_ACTIVITY, ADD_NAME } from "../actionTypes";
 
 const initialState = {
+  name: "Butterfinger",
   activity: "napping",
 };
 
 const activityReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ACTION_NAP: {
+    case ACTION_SET_ACTIVITY: {
+      const { activity } = action.payload;
       return {
         ...state,
-        activity: "napping",
+        activity,
       };
     }
-    case ACTION_EAT: {
+    case ADD_NAME: {
+      const { name } = action.payload;
       return {
         ...state,
-        activity: "eating",
-      };
-    }
-    case ACTION_PLAY: {
-      return {
-        ...state,
-        activity: "playing",
+        name,
       };
     }
     default:

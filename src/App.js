@@ -4,7 +4,9 @@ import Activity from "./components/Activity";
 function App() {
   return (
     <div className="App">
-      <Activity />
+      <h1>
+        <Activity />
+      </h1>
     </div>
   );
 }
