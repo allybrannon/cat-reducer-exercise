@@ -7,7 +7,7 @@ export const setActivity = (activity) => ({
   },
 });
 
-export const setName = (name) => ({
+export const addName = (name) => ({
   type: ADD_NAME,
   payload: {
     name,

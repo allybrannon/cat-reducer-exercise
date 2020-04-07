@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { setName } from "../redux/actions";
+import { addName } from "../redux/actions";
 
-class UpdateName extends Component {
+class CatName extends Component {
   state = {
     textInput: "",
   };
@@ -15,7 +15,7 @@ class UpdateName extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.setName(this.state.textInput);
+    this.props.addName(this.state.textInput);
   };
 
   render() {
@@ -28,4 +28,4 @@ class UpdateName extends Component {
   }
 }
 
-export default connect(null, { setName })(UpdateName);
+export default connect(null, { addName })(CatName);
